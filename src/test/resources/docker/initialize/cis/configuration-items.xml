@@ -9,14 +9,75 @@
 <xl:export xmlns:xl="http://www.xebialabs.com/xl-export">
   <xl:metadata>
     <xl:exported-by>admin</xl:exported-by>
-    <xl:exported-at>2016-07-15T22:08:00.297+0000</xl:exported-at>
-    <xl:exported-format-version>5.5.1</xl:exported-format-version>
+    <xl:exported-at>2017-10-02T03:17:04.802+0000</xl:exported-at>
+    <xl:exported-format-version>7.0.0</xl:exported-format-version>
     <xl:encryption-key-fingerprint>f6094d333c0736339884d1fe38d9c54e14019ac9</xl:encryption-key-fingerprint>
   </xl:metadata>
   <xl:exported-configuration-items exported-root-id="/">
-    <overthere.LocalHost id="Infrastructure/localhost" created-by="admin" created-at="2016-07-15T22:04:54.863+0000" last-modified-by="admin" last-modified-at="2016-07-15T22:04:54.863+0000">
+    <udm.DeploymentPackage id="Applications/msmq-app/1.0.0" created-by="admin" created-at="2017-10-02T02:51:33.764+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:51:33.764+0000">
+      <orchestrator />
+      <applicationDependencies />
+      <dependencyResolution>LATEST</dependencyResolution>
+      <undeployDependencies>false</undeployDependencies>
+    </udm.DeploymentPackage>
+    <udm.Environment id="Environments/DEV" created-by="admin" created-at="2017-10-02T02:51:07.346+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:51:07.346+0000">
+      <members>
+        <ci ref="Infrastructure/win2008r2x64" />
+      </members>
+      <dictionaries />
+      <triggers />
+    </udm.Environment>
+    <overthere.LocalHost id="Infrastructure/localhost" created-by="admin" created-at="2017-10-02T02:47:30.956+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:47:30.956+0000">
       <tags />
       <os>UNIX</os>
+      <puppetPath>/usr/local/bin</puppetPath>
     </overthere.LocalHost>
+    <udm.Application id="Applications/msmq-app" created-by="admin" created-at="2017-10-02T02:51:24.310+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:51:33.910+0000">
+      <lastVersion>1.0.0</lastVersion>
+    </udm.Application>
+    <udm.DeployedApplication id="Environments/DEV/msmq-app" created-by="admin" created-at="2017-10-02T03:07:28.221+0000" last-modified-by="admin" last-modified-at="2017-10-02T03:07:28.221+0000">
+      <version ref="Applications/msmq-app/1.0.0" />
+      <deployeds>
+        <ci ref="Infrastructure/win2008r2x64/queue" />
+      </deployeds>
+      <orchestrator />
+      <optimizePlan>true</optimizePlan>
+      <boundConfigurationItems />
+      <unresolvedPlaceholders />
+      <undeployDependencies>false</undeployDependencies>
+    </udm.DeployedApplication>
+    <msmq.QueueSpec id="Applications/msmq-app/1.0.0/queue" created-by="admin" created-at="2017-10-02T02:52:35.327+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:52:35.327+0000">
+      <tags />
+      <queueName>.\Private$\leQueue</queueName>
+      <useJournalQueue>true</useJournalQueue>
+      <permissions>
+        <entry key="ANONYMOUS LOGON">FullControl</entry>
+      </permissions>
+    </msmq.QueueSpec>
+    <msmq.Queue id="Infrastructure/win2008r2x64/queue" created-by="admin" created-at="2017-10-02T03:07:28.222+0000" last-modified-by="admin" last-modified-at="2017-10-02T03:07:28.222+0000">
+      <deployable ref="Applications/msmq-app/1.0.0/queue" />
+      <startOnCreate>true</startOnCreate>
+      <stopOnDestroy>true</stopOnDestroy>
+      <stopStartOnModify>true</stopStartOnModify>
+      <stopStartOnNoop>true</stopStartOnNoop>
+      <queueName>.\Private$\leQueue</queueName>
+      <useJournalQueue>true</useJournalQueue>
+      <permissions>
+        <entry key="ANONYMOUS LOGON">FullControl</entry>
+      </permissions>
+    </msmq.Queue>
+    <overthere.CifsHost id="Infrastructure/win2008r2x64" created-by="admin" created-at="2017-10-02T02:49:10.300+0000" last-modified-by="admin" last-modified-at="2017-10-02T02:49:10.300+0000">
+      <tags />
+      <puppetPath>/usr/local/bin</puppetPath>
+      <os>WINDOWS</os>
+      <connectionType>WINRM_INTERNAL</connectionType>
+      <address>192.168.56.123</address>
+      <username>vagrant</username>
+      <password>{b64}igltsEeChmolDD6xZCEQww==</password>
+      <winrmEnableHttps>false</winrmEnableHttps>
+      <winrsAllowDelegate>false</winrsAllowDelegate>
+      <pathShareMappings />
+      <cifsPort>445</cifsPort>
+    </overthere.CifsHost>
   </xl:exported-configuration-items>
 </xl:export>

@@ -10,4 +10,18 @@
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
+    <type type="msmq.Queue" deployable-type="msmq.QueueSpec" container-type="overthere.Host"  extends="powershell.ExtensiblePowerShellDeployed" description="Windows service">
+
+        <generate-deployable type="msmq.QueueSpec" extends="powershell.BasePowerShellDeployable" description="Specification of a queue." />
+
+        <property name="createScript" default="msmq/create-queue.ps1" hidden="true" />
+        <property name="createVerb" default="Create" hidden="true" />
+        <property name="destroyScript" default="msmq/remove-queue.ps1" hidden="true" />
+        <property name="destroyVerb" default="Remove" hidden="true" />
+
+        <property name="queueName" required="false" description="Name of the queue to create. For example .\Private$\queueName. See MSDN."/>
+        <property name="useJournalQueue" kind="boolean" required="false" default="false" />
+        <property name="allowPermissions" kind="map_string_string" required="false" description="Allow permissions to apply to this queue, specificed as key is user, value is permission type. For example: ANONYMOUS LOGON, FullControl. See [System.Messaging.MessageQueueAccessRights] on MSDN." />
+    </type>
+
 </synthetic>
