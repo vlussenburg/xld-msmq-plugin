@@ -4,8 +4,8 @@
 [![License: MIT][xld-msmq-plugin-license-image] ][xld-msmq-plugin-license-url]
 [![Github All Releases][xld-msmq-plugin-downloads-image] ]()
 
-[xld-msmq-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin.svg?branch=master
-[xld-msmq-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin
+[xld-msmq-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-msmq-plugin.svg?branch=master
+[xld-msmq-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-msmq-plugin
 [xld-msmq-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
 [xld-msmq-plugin-license-url]: https://opensource.org/licenses/MIT
 [xld-msmq-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xld-msmq-plugin/total.svg
