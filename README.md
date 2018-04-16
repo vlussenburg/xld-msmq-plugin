@@ -2,7 +2,7 @@
 
 [![Build Status][xld-msmq-plugin-travis-image]][xld-msmq-plugin-travis-url]
 [![License: MIT][xld-msmq-plugin-license-image] ][xld-msmq-plugin-license-url]
-[![Github All Releases][xld-msmq-plugin-downloads-image] ](release)
+[![Github All Releases][xld-msmq-plugin-downloads-image] ]()
 
 [xld-msmq-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin.svg?branch=master
 [xld-msmq-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin
