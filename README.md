@@ -1,5 +1,16 @@
 # xld-msmq-plugin
 
+[![Build Status][xlr-msmq-plugin-travis-image]][xlr-msmq-plugin-travis-url]
+[![License: MIT][xlr-msmq-plugin-license-image] ][xlr-msmq-plugin-license-url]
+[![Github All Releases][xlr-msmq-plugin-downloads-image] ]()
+
+[xlr-msmq-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin.svg?branch=master
+[xlr-msmq-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-msmq-plugin
+[xlr-msmq-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[xlr-msmq-plugin-license-url]: https://opensource.org/licenses/MIT
+[xlr-msmq-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-msmq-plugin/total.svg
+
+
 # Introduction
 
 The plugin allows you to define include MSM(Q) Queues Specs in your deployment packages which can deploy to Windows Server environments. 
