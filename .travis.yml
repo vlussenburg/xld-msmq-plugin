@@ -1,0 +1,10 @@
+language: java
+deploy:
+  provider: releases
+  api_key:
+    secure: TAgwxrq9tddHh+Q1xY8QZy93PuRan944DRK9MoPzqHllZE9MXki77GLx13B270HtPPyKGWwxdoxXG7iB0p3e6lhCuiLI+HgGpM2nIV9o+67azxmH67D25hn3KhZUhNwKpy2ImzAtLguyxZmcsR/Q49AvnuKT3fVnw8qdO9PJVv9A9d4OhTgsqUQyB7CL7uzFptuoxPxbxRzUmPxMw3rYWWc2B5yqr41oUDa3QkxXZzKCw9ydDkfTIP9DzMMSK/KQ4/VBVJUzGSEsAgpky5FqwBRZjsECSOejhVJDgp5+wQ/VJPe1jPKzKeuc68zhedzLgo8cEz1yRpNBYIWCEPRPsGCmMuKeEV/nNnHzRyUQOd7R4Lvq74bQzTYUYR16x+qOgzEF7dYD26H8uR/4IPOR2Q5x7cNawpIhKAe+yGmBuclpX009q5JfnzDyKvauRp41HerlfuiO9f5Os/20KxkQxzSECKALsukSorqHUcMYk8sBSDcuha6ZG+43t3Zddq54BgcHJPF3Uk+dSw6KgWXYVhlbuCfY3QSAaRu9VgIBFa6NUBkRUbKd2EEIfF1KrTMKRuM3pc1hw8Z66k5c7nWsi4wjM8n5c7CHrNEFlzfTep1/DsE1x2Y0YJv7mCNGUdgZ57xdJfuLMk1QdkDVAhAyTKnn/KXXCp2sBcEA+rCtbVE=
+  file_glob: true
+  file: build/libs/*.xldp
+  skip_cleanup: true
+  on:
+    tags: true
